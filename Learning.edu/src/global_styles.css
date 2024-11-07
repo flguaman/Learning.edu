@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #8b0000;
+  --secondary-color: #ff4444;
+  --dark-red: #4a0000;
+  --light-red: #ffe5e5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--dark-red), var(--primary-color));
+  min-height: 100vh;
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-card:hover {
+  transform: translateY(-5px) rotateX(5deg);
+}
+
+.btn-3d {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 0 var(--dark-red);
+  cursor: pointer;
+}
+
+.btn-3d:hover {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 var(--dark-red);
+}
+
+.game-container {
+  perspective: 1000px;
+  padding: 20px;
+}
